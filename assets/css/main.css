@@ -4,15 +4,8 @@
 @font-face {
   font-family: 'Futura';
   font-style: normal;
-  font-weight: normal;
-  src: url('../../assets/fonts/FuturaBT-Medium.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Futura';
-  font-style: normal;
   font-weight: 600;
-  src: url('../../assets/fonts/FuturaBT-Heavy.woff') format('woff');
+  src: url('../../assets/fonts/Futura-Bold.woff') format('woff');
 }
 
 @font-face {
@@ -54,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.4;
   font-weight: 600;
   margin-bottom: 0;
-  color: #232323;
+  color: #21145F;
   font-family: 'Futura', sans-serif;
 }
 
@@ -378,6 +371,7 @@ a, a:hover {
   justify-content: space-between;
   align-items: center;
   color: #fff;
+  border-radius: 10px;
 }
 
 .nova-header .container {
@@ -386,13 +380,25 @@ a, a:hover {
 }
 
 .nova-header-gradient {
-  background: linear-gradient(90.27deg, rgba(33, 20, 95, 1) 30.35%, rgba(33, 20, 95, 0) 79.33%);
+  background: linear-gradient(90.27deg, rgba(33, 20, 95, 1) 30.35%, rgba(33, 20, 95, 0) 90.33%);
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   z-index: 3;
+  border-radius: 10px;
+}
+
+.nova-header-bg {
+  background: rgb(33, 20, 95);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 55%;
+  z-index: 3;
+  border-radius: 10px;
 }
 
 .nova-header-vector {
@@ -416,12 +422,24 @@ a, a:hover {
   height: 100%;
   width: 100%;
   z-index: 1;
+  border-radius: 10px;
 }
 
 .nova-header-image img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .nova-header {
+    min-height: calc(50vh - 100px);
+  }
+
+  .nova-header h1 {
+    font-size: 2.2rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -616,10 +634,11 @@ a, a:hover {
 .nova-discuss-form {
   height: 100%;
   width: 100%;
+  max-width: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 0;
+  margin: auto;
 }
 
 .nova-discuss-form form {
@@ -633,6 +652,17 @@ a, a:hover {
 
 .nova-discuss-form form label {
   font-weight: 500;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .nova-discuss-vector {
+    display: none;
+  }
+
+  .nova-discuss-content {
+    text-align: center;
+    width: 80%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -713,6 +743,7 @@ a, a:hover {
   top: 50%;
   height: 90%;
   transform: translateY(-50%);
+  opacity: 0.4;
 }
 .nova-footer-vector img {
   height: 100%;
@@ -726,5 +757,90 @@ a, a:hover {
 
   .nova-footer .col-sm-6 {
     width: 50%;
+  }
+}
+
+
+/* =================== Nova Benefits ========================= */
+.nova-benefits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.nova-benefits img {
+  height: 60px;
+  width: auto;
+  margin-right: 15px;
+}
+
+.nova-benefits h2 {
+  color: #00A0DF;
+}
+
+.nova-benefit {
+  height: 180px;
+}
+
+.nova-benefit img {
+  margin-bottom: 10px;
+}
+
+/* =================== Nova Feature ========================= */
+.nova-feature {
+  height: 250px;
+}
+
+.nova-feature h3 {
+  margin-bottom: 12px;
+}
+
+/* =================== Nova Pricings ========================= */
+.nova-pricing {
+  padding: 100px 80px 40px;
+  margin-bottom: 0;
+}
+
+.nova-pricing h4 {
+  margin-bottom: 20px;
+}
+
+.nova-pricing .nova-card {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  .nova-pricing {
+    padding: 60px 20px 30px
+  }
+}
+
+.nova-customer-search {
+  padding: 15px;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.nova-customer-search input {
+  margin-right: 10px;
+  border-radius: 15px;
+  height: 60px;
+}
+
+.nova-customer-search .btn {
+  border-radius: 15px;
+}
+
+@media (max-width: 600px) {
+  .nova-customer-search {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nova-customer-search input {
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 }
