@@ -467,7 +467,7 @@ a, a:hover {
 
 @media (max-width: 600px) {
   html, body {
-    font-size: 15px;
+    font-size: 15px !important;
   }
 
   .nova-header {
@@ -499,6 +499,14 @@ a, a:hover {
   .nova-header h1,
   .nova-header p {
     text-align: center;
+  }
+
+  .nova-header h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
   }
 }
 
