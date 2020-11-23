@@ -2,17 +2,17 @@
 @import "theme.css";
 
 @font-face {
-  font-family: 'ProximaNova';
+  font-family: 'Futura';
   font-style: normal;
   font-weight: normal;
-  src: url('../../assets/fonts/ProximaNova-Regular.woff') format('woff');
+  src: url('../../assets/fonts/FuturaBT-Medium.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'ProximaNova';
+  font-family: 'Futura';
   font-style: normal;
   font-weight: 600;
-  src: url('../../assets/fonts/ProximaNova-Bold.woff') format('woff');
+  src: url('../../assets/fonts/FuturaBT-Heavy.woff') format('woff');
 }
 
 @font-face {
@@ -41,7 +41,7 @@
 
 html, body {
   font-size: 18px;
-  font-family: "ProximaNova", sans-serif;
+  font-family: "Graphik", sans-serif;
   font-weight: normal;
   scroll-behavior: smooth;
   line-height: 1.2;
@@ -55,7 +55,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   margin-bottom: 0;
   color: #232323;
-  font-family: 'ProximaNova', sans-serif;
+  font-family: 'Futura', sans-serif;
 }
 
 h1 {
