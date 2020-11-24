@@ -846,7 +846,9 @@ a:hover {
   text-align: left;
   display: flex;
   justify-content: center;
+  line-height: 1.8;
 }
+
 .nova-benefit ul li:before {
   content: url("../img/benefits-list.svg");
   background-size: contain;
@@ -880,7 +882,8 @@ a:hover {
 /* =================== Nova Pricings ========================= */
 .nova-pricing {
   padding: 100px 80px 40px;
-  margin-bottom: 0;
+  margin: 0 auto;
+  max-width: 500px;
 }
 
 .nova-pricing h4 {
@@ -893,10 +896,10 @@ a:hover {
 
 .nova-blog-img img {
   border-radius: 20px;
+  margin: auto;
 }
 
 .nova-blog-inner-head h5 {
-  font-family: Graphik;
   font-style: normal;
   color: #232323;
   font-weight: 600;
