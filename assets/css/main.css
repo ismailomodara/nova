@@ -104,14 +104,14 @@ a:hover {
 }
 
 .btn-primary {
-  color: #fff;
+  color: #fff !important;
   background-color: #00a0df;
   border-color: #00a0df;
   padding: 14px 25px;
 }
 
 .btn-primary:hover {
-  color: #00a0df;
+  color: #00a0df !important;
   background-color: #fff;
   border-color: #00a0df;
 }
@@ -124,23 +124,23 @@ a:hover {
   box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
 }
 .btn-secondary {
-  color: #fff;
+  color: #fff !important;
   background-color: #21145f;
   border-color: #21145f;
   padding: 14px 25px;
 }
 
 .btn-secondary:hover {
-  color: #21145f;
+  color: #21145f !important;
   background-color: #fff;
-  border-color: #21145f;
+  border-color: #fff;
 }
 
 .btn-secondary:focus,
 .btn-secondary.focus {
   color: #21145f;
   background-color: #fff;
-  border-color: #21145f;
+  border-color: #fff;
   box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
 }
 
@@ -493,6 +493,10 @@ a:hover {
 
   .nova-header {
     min-height: 70vh;
+  }
+
+  .nova-hybrid-bg {
+    width: 100%;
   }
 
   .nova-footer ul li {
