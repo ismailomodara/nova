@@ -1,27 +1,6 @@
 @import "layouts.css";
 @import "theme.css";
 
-@font-face {
-  font-family: "Futura";
-  font-style: normal;
-  font-weight: 600;
-  src: url("../../assets/fonts/Futura-Bold.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Graphik";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../../assets/fonts/Graphik-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Graphik";
-  font-style: normal;
-  font-weight: 600;
-  src: url("../../assets/fonts/Graphik-Bold.woff") format("woff");
-}
-
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
@@ -35,8 +14,8 @@
 html,
 body {
   font-size: 18px;
-  font-family: "Graphik", sans-serif;
-  font-weight: normal;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
   scroll-behavior: smooth;
   line-height: 1.2;
   background: #ffffff;
@@ -51,10 +30,10 @@ h4,
 h5,
 h6 {
   line-height: 1.4;
-  font-weight: 600;
+  font-weight: 900;
   margin-bottom: 0;
   color: #21145f;
-  font-family: "Futura", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 h1 {
@@ -396,7 +375,7 @@ a:hover {
 .nova-header {
   position: relative;
   background: #21145f;
-  min-height: calc(100vh - 100px);
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -404,24 +383,36 @@ a:hover {
   border-radius: 10px;
 }
 
-.nova-header .container {
+.nova-slide {
   position: relative;
-  z-index: 9;
+  min-height: calc(100vh - 100px);
+  display: flex;
+  align-content: center;
 }
 
-.nova-header-gradient {
-  background: linear-gradient(
-    90.27deg,
-    rgba(33, 20, 95, 1) 30.35%,
-    rgba(33, 20, 95, 0) 90.33%
-  );
+.nova-slide-image {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: 3;
-  border-radius: 10px;
+  overflow: hidden;
+}
+
+.nova-slide-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.owl-dots {
+  display: none;
+}
+.nova-header .container {
+  position: relative;
+  z-index: 9;
+  display: flex;
+  align-items: center;
 }
 
 .nova-header-bg {
@@ -448,7 +439,6 @@ a:hover {
 
 .nova-header h1,
 .nova-header p {
-  color: #fff;
   margin-bottom: 25px;
 }
 
@@ -477,14 +467,18 @@ a:hover {
     min-height: calc(50vh - 100px);
   }
 
-  .nova-header h1 {
-    font-size: 2.2rem;
+  .nova-header p {
+    font-size: 1.2rem;
   }
 }
 
 @media (max-width: 768px) {
   .nova-nav-links {
     display: none !important;
+  }
+
+  .nova-slide {
+    min-height: calc(100vh - 90px);
   }
 
   .nova-mobile--menu__toggler {
@@ -529,10 +523,6 @@ a:hover {
 
   .nova-mobile--menu__links:last-child {
     display: block;
-  }
-
-  .nova-header {
-    min-height: calc(100vh - 80px);
   }
 
   .nova-header-gradient,

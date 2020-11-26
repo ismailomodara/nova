@@ -8,8 +8,14 @@
 
     <link rel="manifest" href="site.webmanifest" />
     <link rel="apple-touch-icon" href="icon.png" />
-    <!-- Place favicon.ico in the root directory -->
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/animate.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -68,28 +74,50 @@
       </div>
     </div>
     <header class="nova-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-lg-7 col-xl-6 wow fadeIn">
-            <h1>
-              Relationship <br />
-              That ...
-            </h1>
-            <p>
-              Everyone deserves an opportunity to live a life of financial ease.
-              Take one step closer to the life of your dreams with loans,
-              investments and savings products.
-            </p>
-            <a href="" class="btn btn-primary mr-3">Get Started</a>
+      <div class="nova-header-carousel owl-carousel">
+        <div class="nova-slide">
+          <div class="nova-slide-image">
+            <img src="assets/img/home/header-image-1.jpg" alt="" />
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-lg-7 col-xl-6 mx-auto">
+                <h1>Make everyday an <span class="co-blue">investment</span> in your future</h1>
+                <p>By investing in a Nova mutual fund, you can unlock benefits that will last a lifetime.</p>
+                <a href="" class="btn btn-primary mr-3">Get Started</a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="nova-header-gradient"></div>
-      <div class="nova-header-vector">
-        <img src="assets/img/header-vector.svg" alt />
-      </div>
-      <div class="nova-header-image">
-        <img src="assets/img/home/header-image.png" alt />
+        <div class="nova-slide">
+          <div class="nova-slide-image">
+            <img src="assets/img/home/header-image-2.jpg" alt="" />
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-lg-7 col-xl-6">
+                <h1>It's about <span class="co-blue">trust,</span> not transactions.</h1>
+                <p>We invest in relationships above all else, making sure our tailored investment solutions help our clients reach their goals.</p>
+                <p>Invest in a Nova mutual fund today, to get started.</p>
+                <a href="" class="btn btn-primary mr-3">Get Started</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nova-slide">
+          <div class="nova-slide-image">
+            <img src="assets/img/home/header-image-3.jpg" alt="" />
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-lg-7 col-xl-6">
+                <h1>It's much more than <span class="co-blue">investing</span> to us!</h1>
+                <p>We help our clients consistently deliver value beyond investment performance.</p>
+                <a href="" class="btn btn-primary mr-3">Get Started</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <section class="nova-explore">
@@ -379,6 +407,7 @@
     </footer>
 
     <script src="assets/js/jquery-3.3.1.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/wow.js"></script>
     <script>
       new WOW().init();
@@ -391,6 +420,15 @@
       $(".nova-mobile--menu__links .nav-item").click(function() {
         $(this).toggleClass("active");
         $(".nova-mobile--menu").toggleClass("open");
+      });
+
+      //Owl
+      $(".nova-header-carousel").owlCarousel({
+        loop: true,
+        autoplay: false,
+        nav: false,
+        items: 1,
+        animateOut: 'fadeOut'
       });
     </script>
   </body>
