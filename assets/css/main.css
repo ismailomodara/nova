@@ -89,19 +89,14 @@ a:hover {
   padding: 14px 25px;
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
   color: #00a0df !important;
-  background-color: #fff;
-  border-color: #00a0df;
+  background-color: #fff !important;
+  border-color: #00a0df !important;
 }
 
-.btn-primary:focus,
-.btn-primary.focus {
-  color: #00a0df;
-  background-color: #fff;
-  border-color: #00a0df;
-  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
-}
 .btn-secondary {
   color: #fff !important;
   background-color: #21145f;
@@ -109,18 +104,12 @@ a:hover {
   padding: 14px 25px;
 }
 
-.btn-secondary:hover {
-  color: #21145f !important;
-  background-color: #fff;
-  border-color: #fff;
-}
-
+.btn-secondary:hover,
 .btn-secondary:focus,
-.btn-secondary.focus {
-  color: #21145f;
-  background-color: #fff;
-  border-color: #fff;
-  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+.btn-secondary:active {
+  color: #21145f !important;
+  background-color: #fff !important;
+  border-color: #fff !important;
 }
 
 /* =================== Header Section ========================= */
@@ -372,10 +361,21 @@ a:hover {
   }
 }
 
-.nova-header {
+.nova-header-index {
   position: relative;
   background: #21145f;
   height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.nova-header {
+  position: relative;
+  background: #21145f;
+  min-height: calc(100vh - 100px);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -436,9 +436,15 @@ a:hover {
   left: 0;
   z-index: 3;
 }
-
 .nova-header h1,
 .nova-header p {
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.nova-header-index h1,
+.nova-header-index p {
+  color: #21145f;
   margin-bottom: 25px;
 }
 
@@ -582,11 +588,6 @@ a:hover {
 
 /* =================== Nova CTA ============================ */
 
-.nova-cta {
-  padding: 100px 80px;
-  position: relative;
-}
-
 .nova-cta .ctas {
   display: flex;
   align-items: center;
@@ -600,16 +601,43 @@ a:hover {
 }
 
 .nova-cta-image {
-  position: absolute;
-  width: 50%;
-  left: 50%;
-  bottom: 0;
   display: flex;
   justify-content: center;
 }
 
+.nova-cta-info {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  align-items: center;
+}
+.nova-cta-info p {
+  text-align: center;
+  font-size: 18px;
+  line-height: 167.3%;
+}
+.nova-cta-info p strong {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 120%;
+}
+
+.nova-cta-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 3rem;
+}
+
+.nova-cta-info span {
+  height: 80px;
+  width: 80px;
+  background: #ebf9ff;
+  border-radius: 50%;
+}
+
 .nova-cta-image img {
-  height: 380px;
+  height: 500px;
   width: auto;
 }
 
@@ -634,14 +662,25 @@ a:hover {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .nova-cta {
-    padding: 50px 20px 420px;
+    padding: 50px 20px;
   }
 
   .nova-cta h2 {
     text-align: center;
     font-size: 2.1rem;
+  }
+
+  .nova-cta-info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem 0;
+  }
+
+  .nova-cta-section {
+    flex-direction: column;
   }
 
   .nova-cta .ctas a:last-child img {
@@ -656,22 +695,30 @@ a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .nova-discuss-vector img {
   height: 100%;
+  width: 100%;
 }
 
 .nova-discuss-content {
   position: relative;
   z-index: 1;
-  width: 50%;
+  width: 100%;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .nova-discuss-content h2 {
   line-height: 1.2;
   margin-bottom: 20px;
+  font-size: 40px;
 }
 .nova-discuss-content p {
   font-size: 28px;
@@ -680,7 +727,6 @@ a:hover {
 .nova-discuss-form {
   height: 100%;
   width: 100%;
-  max-width: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -690,14 +736,26 @@ a:hover {
 .nova-discuss-form form {
   width: 80%;
   margin: auto;
+  padding: 25px 0;
 }
 
 .nova-discuss-form form .form-group {
   text-align: center;
+  padding: 1rem 2rem;
+  margin: 0;
+}
+.nova-discuss-form form .form-group:hover {
+  background: #ffffff;
+  box-shadow: 0px 4px 31px rgba(0, 0, 0, 0.06);
+  border-radius: 15px;
 }
 
 .nova-discuss-form form label {
   font-weight: 500;
+}
+.nova-discuss-form form input {
+  font-size: 16px;
+  text-align: center;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -714,6 +772,10 @@ a:hover {
 @media (max-width: 600px) {
   .nova-discuss-vector {
     height: 80%;
+  }
+
+  .nova-discuss-form form .form-group {
+    padding: 1rem;
   }
 
   .nova-discuss-content {
