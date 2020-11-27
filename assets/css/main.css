@@ -375,7 +375,7 @@ a:hover {
 .nova-header {
   position: relative;
   background: #21145f;
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 80px);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -385,7 +385,7 @@ a:hover {
 
 .nova-slide {
   position: relative;
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 80px);
   display: flex;
   align-content: center;
 }
