@@ -155,11 +155,18 @@ a:hover {
   opacity: 0.74;
 }
 
-.nova-nav-links li.active a {
+.nova-nav-links li.active > a {
   color: #00a0df;
   font-weight: 500;
 }
 
+.nova-nav-links .dropdown-item {
+  padding: .5rem 1.5rem
+}
+
+.nova-nav-links .dropdown-menu.show {
+  transform: translate3d(25px, 43px, 0px) !important;
+}
 .nova-mobile--menu__toggler {
   position: absolute;
   right: 0;
@@ -272,7 +279,7 @@ a:hover {
   padding: 0;
   position: relative;
   z-index: 3;
-  margin-top: 80px;
+  margin-top: 150px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -295,7 +302,7 @@ a:hover {
   opacity: 0.6;
 }
 
-.nova-mobile--menu__links li.active a {
+.nova-mobile--menu__links li.active > a {
   padding-bottom: 5px;
   border-bottom: 3px solid #00a0df;
   font-weight: 600;
@@ -305,6 +312,22 @@ a:hover {
 .nova-mobile--menu__links li a:hover {
   opacity: 1;
   transition: opacity 0.2s ease-in-out;
+}
+
+.nova-mobile--menu__links--product {
+  padding: 40px 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.nova-mobile--menu__links--product a {
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+.nova-mobile--menu__links--product a.active {
+  opacity: 1;
 }
 
 .nova-mobile--menu.open .nova-mobile--menu__links li {
@@ -470,8 +493,9 @@ a:hover {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .nova-header {
-    min-height: calc(50vh - 100px);
+  .nova-header,
+  .nova-slide {
+    min-height: calc(80vh - 100px);
   }
 
   .nova-header p {
@@ -488,7 +512,7 @@ a:hover {
     min-height: calc(100vh - 90px);
   }
 
-  .nova-slide .row > div {
+  .nova-header .row > div {
     margin: auto;
   }
 
@@ -524,6 +548,15 @@ a:hover {
     text-align: center;
   }
 
+  .nova-header,
+  .nova-slide {
+    min-height: 100vh;
+  }
+
+  .nova-header h1 {
+    font-size: 2.2rem;
+  }
+
   .nova-navbar .nova-logo img {
     height: 32px;
   }
@@ -549,6 +582,18 @@ a:hover {
 
   h2 {
     font-size: 2rem;
+  }
+
+  .nova-mobile--menu__links {
+    margin-top: 100px;
+  }
+
+  .nova-mobile--menu__links li {
+    margin-bottom: 30px;
+  }
+
+  .nova-mobile--menu__links li a {
+    font-size: 1.2rem;
   }
 }
 

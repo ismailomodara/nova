@@ -33,7 +33,15 @@
         <ul class="nova-nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="https://www.novambl.com/nova-merchant-bank-at-a-glance/">About us</a></li>
-          <li><a href="#products">Products</a></li>
+          <li><a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Products
+          </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="nova-prime.html">Nova Prime Fund</a>
+              <a class="dropdown-item" href="nova-hybrid.html">Nova Hybrid Fund</a>
+              <a class="dropdown-item" href="nova-usd.html">Nova USD Fixed Income Fund</a>
+            </div>
+          </li>
           <li class="active"><a href="blog.html">Blog</a></li>
           <li><a href="#leadform">Lead form</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -54,8 +62,16 @@
           <li>
             <a href="about.html">About us</a>
           </li>
-          <li>
-            <a href="#products">Products</a>
+          <li><a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Products
+          </a>
+            <div class="collapse" id="collapseExample">
+              <div class="nova-mobile--menu__links--product">
+                <a href="nova-prime.html">Nova Prime Fund</a>
+                <a href="nova-hybrid.html">Nova Hybrid Fund</a>
+                <a href="nova-usd.html">Nova USD Fixed Income Fund</a>
+              </div>
+            </div>
           </li>
           <li class="active">
             <a href="blog.html">Blog</a>
@@ -306,6 +322,8 @@
     </footer>
 
     <script src="assets/js/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/wow.js"></script>
     <script>
       new WOW().init();
