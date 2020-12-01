@@ -632,6 +632,18 @@ a:hover {
   }
 }
 
+@media (max-width: 600px) {
+  .nova-usd {
+    background-image: url('../img/home/nova-usd.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .nova-usd img {
+    display: none;
+  }
+}
+
 /* =================== Nova CTA ============================ */
 
 .nova-cta .ctas {
