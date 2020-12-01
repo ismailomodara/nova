@@ -135,9 +135,25 @@ section {
 }
 
 .nova-blog-card {
-  border: 1px solid #d2d2d270;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
   border-radius: 15px;
   margin-bottom: 30px;
+  position: relative;
+  top: 0;
+  transition: top 0.3s ease-out;
+}
+
+.nova-blog-card:hover {
+  top: -6px;
+  transition: top 0.3s ease-in;
+}
+
+.nova-blog-card > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .nova-blog-card .nova-blog-card--image {
